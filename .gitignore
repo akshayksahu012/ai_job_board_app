@@ -1,0 +1,22 @@
+.env
+*/.env
+**/.env
+
+# Node
+node_modules/
+*/node_modules/
+dist/
+build/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Uploads / local data
+server/uploads/
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/
