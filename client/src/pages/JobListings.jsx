@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../services/api';
 import JobCard from '../components/JobCard';
+import './JobListings.css';
 
 export default function JobListings() {
   const [jobs, setJobs] = useState([]);
@@ -42,7 +43,7 @@ export default function JobListings() {
       {loading ? <p>Loading...</p> : (
         <div className="grid">
           {jobs.map((job) => <JobCard key={job._id} job={job} />)}
-          {jobs.length === 0 && <p>No jobs match your filters.</p>}
+          {jobs.length === 0 && <p className="empty-state">No jobs match your filters.</p>}
         </div>
       )}
 

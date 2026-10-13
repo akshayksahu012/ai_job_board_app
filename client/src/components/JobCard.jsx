@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './JobCard.css';
 
 export default function JobCard({ job }) {
   return (

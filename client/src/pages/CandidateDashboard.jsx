@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import api from '../services/api';
 import MatchedJobCard from '../components/MatchedJobCard';
 import JobCard from '../components/JobCard';
+import './CandidateDashboard.css';
 
 export default function CandidateDashboard() {
   const [file, setFile] = useState(null);
@@ -86,7 +87,7 @@ export default function CandidateDashboard() {
       <div className="card">
         <h3>Find Matching Jobs</h3>
         {resumes.length === 0 ? (
-          <p>Upload a resume above first.</p>
+          <p className="empty-state">Upload a resume above first.</p>
         ) : (
           <>
             <div className="filters-bar">
@@ -119,7 +120,7 @@ export default function CandidateDashboard() {
       <h3>Recently Posted by Recruiters</h3>
       <div className="grid">
         {postedJobs.map((job) => <JobCard key={job._id} job={job} />)}
-        {postedJobs.length === 0 && <p>No jobs posted yet.</p>}
+        {postedJobs.length === 0 && <p className="empty-state">No jobs posted yet.</p>}
       </div>
     </div>
   );

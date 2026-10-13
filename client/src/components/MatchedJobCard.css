@@ -1,0 +1,29 @@
+.matched-card {
+  position: relative;
+  border: 1px solid #dcd6ff;
+  background: linear-gradient(180deg, #fbfaff, #ffffff);
+}
+
+.matched-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(79, 70, 229, 0.18);
+}
+
+.matched-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.matched-card h3 { margin-top: 0; }
+
+.matched-card .btn-primary {
+  margin-top: 12px;
+}

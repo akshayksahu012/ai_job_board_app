@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
+import './PostJob.css';
 
 export default function PostJob() {
   const [form, setForm] = useState({

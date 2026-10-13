@@ -1,0 +1,42 @@
+.job-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition);
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: #d9defb;
+}
+.job-card:hover::before { transform: scaleY(1); }
+
+.job-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 2px;
+}
+
+.job-company {
+  color: var(--text-muted);
+  margin: 4px 0 10px;
+  font-size: 0.9rem;
+}
+
+.job-card .skill-tags { min-height: 30px; }
+
+.job-card .btn-secondary {
+  margin-top: auto;
+  align-self: flex-start;
+}

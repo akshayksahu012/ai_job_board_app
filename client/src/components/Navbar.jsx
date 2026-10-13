@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import './Navbar.css';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -14,9 +15,12 @@ export default function Navbar() {
     <nav className="navbar">
       <Link to="/" className="brand">AI Job Board</Link>
       <div className="nav-links">
-        <Link to="/jobs">Jobs</Link>
-        {!user && <Link to="/login">Login</Link>}
-        {!user && <Link to="/register">Register</Link>}
+        <Link to="/">Home</Link>
+        <Link to="/#about">About</Link>
+        <Link to="/#category">Category</Link>
+        <Link to="/#blog">Blog</Link>
+        <Link to="/#contact">Contact</Link>
+        {!user && <Link className="nav-login" to="/login">Login</Link>}
 
         {user?.role === 'candidate' && <Link to="/dashboard">Dashboard</Link>}
         {user?.role === 'recruiter' && <Link to="/recruiter">Recruiter</Link>}

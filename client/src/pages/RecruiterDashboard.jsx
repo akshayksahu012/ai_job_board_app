@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
+import './RecruiterDashboard.css';
 
 export default function RecruiterDashboard() {
   const { user } = useAuth();
@@ -36,7 +37,7 @@ export default function RecruiterDashboard() {
             </div>
           </div>
         ))}
-        {jobs.length === 0 && <p>You haven't posted any jobs yet.</p>}
+        {jobs.length === 0 && <p className="empty-state">You haven't posted any jobs yet.</p>}
       </div>
     </div>
   );

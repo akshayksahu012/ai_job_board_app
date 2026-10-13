@@ -1,0 +1,55 @@
+.page h2 {
+  margin-bottom: 24px;
+}
+
+.page h3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+}
+.page h3::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 36px; height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.upload-form {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  transition: border-color var(--transition), background var(--transition);
+}
+.upload-form:hover {
+  border-color: var(--primary);
+  background: #e9edfe;
+}
+
+.upload-form input[type="file"] {
+  border: none;
+  background: none;
+  padding: 4px 0;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filters-bar {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filters-bar select,
+.filters-bar input {
+  flex: 1;
+  min-width: 180px;
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../services/api';
+import './JobDetails.css';
 
 export default function JobDetails() {
   const { id } = useParams();
@@ -17,7 +18,7 @@ export default function JobDetails() {
       <div className="card">
         <h2>{job.title}</h2>
         <p className="job-company">{job.company} · {job.location}{job.remote ? ' · Remote' : ''}</p>
-        {job.salary && <p>Salary: ${job.salary.toLocaleString()}</p>}
+        {job.salary && <p><span className="badge">Salary: ${job.salary.toLocaleString()}</span></p>}
         <div className="skill-tags">
           {job.skills.map((s) => <span key={s} className="tag">{s}</span>)}
         </div>

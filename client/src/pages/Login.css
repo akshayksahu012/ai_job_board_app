@@ -1,0 +1,37 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+  padding: 60px 20px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(79, 70, 229, 0.08), transparent 40%),
+    var(--bg);
+}
+
+.auth-form {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 34px 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  animation: fadeInUp 420ms ease both;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.auth-form > p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.auth-form .btn-primary {
+  margin-top: 6px;
+  width: 100%;
+}
